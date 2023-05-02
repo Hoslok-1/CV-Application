@@ -7,6 +7,11 @@ function App()
 {
   const [showEditOrSave,setShowEditOrSave] = React.useState(true)
   
+  const [formData,setFormData] = React.useState({
+    jobTitle:"",
+    companyName:"",
+  })
+
   function toggleState()
   {
     setShowEditOrSave(prevState => !prevState)
@@ -15,7 +20,7 @@ function App()
   return(
     <div>
       <button onClick={toggleState}>Save</button>
-      {showEditOrSave ? <EditForm /> : <SavedForm />}
+      {showEditOrSave ? <EditForm formData = {formData} setFormData = {setFormData} /> : <SavedForm formData = {formData}/>}
     </div>
   )
 }
