@@ -1,11 +1,21 @@
 import React from 'react';
 import './App.css';
+import EditForm from './EditForm';
+import SavedForm from './SavedForm';
 
-function App() {
-  let num = 10;
+function App()
+{
+  const [showEditOrSave,setShowEditOrSave] = React.useState(true)
+  
+  function toggleState()
+  {
+    setShowEditOrSave(prevState => !prevState)
+  }
+
   return(
     <div>
-      <p>Hello,World {num}</p>
+      <button onClick={toggleState}>Save</button>
+      {showEditOrSave ? <EditForm /> : <SavedForm />}
     </div>
   )
 }
