@@ -2,6 +2,7 @@ import React from "react"
 import WorkExp from "./components/WorkExp"
 
 
+
 export default function EditForm(props:any)
 {
     const [dataShown,setDataShown] = React.useState({
@@ -21,7 +22,7 @@ export default function EditForm(props:any)
     return(
 
         <div>
-          {dataShown.WorkExperience && <WorkExp formDataWorkExp = {props.formData} setFormDataWorkExp = {props.setFormData}/>}
+          {dataShown.WorkExperience && <WorkExp formData = {props.formData} setFormData = {props.setFormData}/>}
           <button onClick={workExpToggle}>{dataShown.WorkExperience ? "Hide" : "Add work experience"}</button>
         </div>
     )

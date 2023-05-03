@@ -2,9 +2,15 @@ import React from "react"
 
 export default function WorkExp(props:any)
 {
+
+    const [workItems,setWorkItems] = React.useState({
+        companyName:"",
+        jobTitle:""
+    })
     
+
     function handleChange(event:any){
-        props.setFormDataWorkExp((prevData: any) => {
+        setWorkItems((prevData: any) => {
             return {
                 ...prevData,
                 [event?.target.name]:event?.target.value
@@ -17,10 +23,19 @@ export default function WorkExp(props:any)
     function handleSubmit(event:any)
     {
         event.preventDefault();
-        alert("Work Experience Added");  
+        alert("Work Experience Added"); 
+        props.setFormData((prevState: any) => {
+            return{
+                ...prevState,
+                jobTitle:[...prevState.jobTitle,workItems.jobTitle],
+                companyName:[...prevState.companyName,workItems.companyName]
+            }
+        })
+   
+
     }
 
-    console.log(props.formDataWorkExp)
+    console.log(workItems)
     return (
         <form id="work-exp-form" onSubmit={handleSubmit}>
             <input
@@ -28,16 +43,17 @@ export default function WorkExp(props:any)
                 placeholder="Job Title"
                 onChange = {handleChange}
                 name = "jobTitle"
-                value = {props.formDataWorkExp.jobTitle}
+                value = {workItems.jobTitle}
             />
             <input
                 type = "text"
                 placeholder="Company Name"
                 onChange = {handleChange}
                 name = "companyName"
-                value = {props.formDataWorkExp.companyName}
+                value = {workItems.companyName}
             />
             <button>Submit</button>
         </form>
     )
 }
+

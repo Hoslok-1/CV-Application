@@ -3,13 +3,15 @@ import './App.css';
 import EditForm from './EditForm';
 import SavedForm from './SavedForm';
 
+export let workExpArr:any = [];
+
 function App()
 {
   const [showEditOrSave,setShowEditOrSave] = React.useState(true)
   
   const [formData,setFormData] = React.useState({
-    jobTitle:"",
-    companyName:"",
+    jobTitle:[],
+    companyName:[],
   })
 
   function toggleState()
