@@ -10,8 +10,13 @@ function App()
   const [showEditOrSave,setShowEditOrSave] = React.useState(true)
   
   const [formData,setFormData] = React.useState({
+    fullName:"",
+    githubLink:"",
+    linkdinLink:"",
+    summary:"",
     jobTitle:[],
     companyName:[],
+    joiningDate:[],
   })
 
   function toggleState()

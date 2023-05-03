@@ -5,7 +5,8 @@ export default function WorkExp(props:any)
 
     const [workItems,setWorkItems] = React.useState({
         companyName:"",
-        jobTitle:""
+        jobTitle:"",
+        joiningDate:"",
     })
     
 
@@ -28,7 +29,8 @@ export default function WorkExp(props:any)
             return{
                 ...prevState,
                 jobTitle:[...prevState.jobTitle,workItems.jobTitle],
-                companyName:[...prevState.companyName,workItems.companyName]
+                companyName:[...prevState.companyName,workItems.companyName],
+                joiningDate:[...prevState.joiningDate,workItems.joiningDate],
             }
         })
    
@@ -51,6 +53,13 @@ export default function WorkExp(props:any)
                 onChange = {handleChange}
                 name = "companyName"
                 value = {workItems.companyName}
+            />
+            <input
+                type = "text"
+                placeholder="Joining Date"
+                onChange = {handleChange}
+                name = "joiningDate"
+                value = {workItems.joiningDate}
             />
             <button>Submit</button>
         </form>
