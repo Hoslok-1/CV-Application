@@ -17,6 +17,11 @@ function App()
     jobTitle:[],
     companyName:[],
     joiningDate:[],
+    universityName:[],
+    uniCity:[],
+    uniDegree:[],
+    uniFrom:[],
+    uniTo:[]
   })
 
   function toggleState()

@@ -24,7 +24,6 @@ export default function WorkExp(props:any)
     function handleSubmit(event:any)
     {
         event.preventDefault();
-        alert("Work Experience Added"); 
         props.setFormData((prevState: any) => {
             return{
                 ...prevState,
@@ -33,8 +32,12 @@ export default function WorkExp(props:any)
                 joiningDate:[...prevState.joiningDate,workItems.joiningDate],
             }
         })
-   
-
+        setWorkItems({
+            companyName:"",
+            jobTitle:"",
+            joiningDate:"",
+        })
+        alert("Work Experience Added"); 
     }
 
     console.log(workItems)
