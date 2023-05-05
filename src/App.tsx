@@ -22,7 +22,8 @@ function App()
     uniCity:[],
     uniDegree:[],
     uniFrom:[],
-    uniTo:[]
+    uniTo:[],
+    userSkills:[]
   })
 
   function toggleState()

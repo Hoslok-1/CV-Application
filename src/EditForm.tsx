@@ -3,6 +3,7 @@ import './cssFiles/EditForm.css'
 import WorkExp from "./components/WorkExp"
 import NameLinks from "./components/NameLinks"
 import Education from './components/Education';
+import Skills from "./components/Skills";
 
 
 export default function EditForm(props:any)
@@ -40,6 +41,7 @@ export default function EditForm(props:any)
           <button onClick={workExpToggle}>{dataShown.WorkExperience ? "Hide" : "Add work experience"}</button>
           {dataShown.showEducation && <Education formData = {props.formData} setFormData = {props.setFormData} />}
           <button onClick={educationToggle}>{dataShown.showEducation ? "Hide" : "Add Education"}</button>
+          <Skills formData = {props.formData} setFormData = {props.setFormData} />
         </div>
     )
 }

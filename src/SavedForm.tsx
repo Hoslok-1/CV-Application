@@ -1,4 +1,6 @@
 import React from "react"
+import uniqid from "uniqid"
+import "./cssFiles/SavedForm.css"
 
 export default function SavedForm(props:any)
 {
@@ -59,6 +61,20 @@ export default function SavedForm(props:any)
         })
     }
 
+    
+    function displayUserSkills()
+    {        
+        return (
+            <div key={uniqid()} className="user-skills">
+                {
+                    (formData.userSkills).split(' ').map((item:string) => {
+                        return <p key = {uniqid()} >{item}</p>
+                    })
+                }
+            </div>
+        )
+    }
+
     return(
         <div>
             <div className="name-links">
@@ -95,7 +111,10 @@ export default function SavedForm(props:any)
 
                     </div>
                 ))}
-            </div>  
+            </div> 
+            <div className="user-skills-form">
+                    {displayUserSkills()}
+            </div> 
         </div>
     )
 }
