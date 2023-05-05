@@ -17,6 +17,7 @@ function App()
     jobTitle:[],
     companyName:[],
     joiningDate:[],
+    jobDesc:[],
     universityName:[],
     uniCity:[],
     uniDegree:[],
@@ -32,7 +33,7 @@ function App()
   return(
     <div>
       <button onClick={toggleState}>Save</button>
-      {showEditOrSave ? <EditForm formData = {formData} setFormData = {setFormData} /> : <SavedForm formData = {formData}/>}
+      {showEditOrSave ? <EditForm formData = {formData} setFormData = {setFormData} /> : <SavedForm formData = {formData} setFormData = {setFormData} />}
     </div>
   )
 }

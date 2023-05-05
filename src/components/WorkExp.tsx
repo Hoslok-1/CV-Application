@@ -7,6 +7,7 @@ export default function WorkExp(props:any)
         companyName:"",
         jobTitle:"",
         joiningDate:"",
+        jobDesc:""
     })
     
 
@@ -30,12 +31,14 @@ export default function WorkExp(props:any)
                 jobTitle:[...prevState.jobTitle,workItems.jobTitle],
                 companyName:[...prevState.companyName,workItems.companyName],
                 joiningDate:[...prevState.joiningDate,workItems.joiningDate],
+                jobDesc:[...prevState.jobDesc,workItems.jobDesc],
             }
         })
         setWorkItems({
             companyName:"",
             jobTitle:"",
             joiningDate:"",
+            jobDesc:""
         })
         alert("Work Experience Added"); 
     }
@@ -63,6 +66,12 @@ export default function WorkExp(props:any)
                 onChange = {handleChange}
                 name = "joiningDate"
                 value = {workItems.joiningDate}
+            />
+            <textarea
+                onChange={handleChange}
+                name="jobDesc"
+                value={workItems.jobDesc}
+                placeholder="Summary of the work done in this company"
             />
             <button>Submit</button>
         </form>
