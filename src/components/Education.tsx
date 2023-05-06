@@ -2,7 +2,7 @@ import React from "react"
 
 export default function Education(props:any){
 
-    const {FormData,setFormData} = props
+    const {setFormData} = props
 
     const [items,setItems] = React.useState({
         universityName:"",

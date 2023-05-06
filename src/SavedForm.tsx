@@ -63,7 +63,10 @@ export default function SavedForm(props:any)
 
     
     function displayUserSkills()
-    {        
+    {   
+        if (!formData.userSkills || typeof formData.userSkills !== 'string') {
+            return null;
+        }
         return (
             <div key={uniqid()} className="user-skills">
                 {

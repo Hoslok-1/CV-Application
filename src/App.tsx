@@ -23,7 +23,7 @@ function App()
     uniDegree:[],
     uniFrom:[],
     uniTo:[],
-    userSkills:[]
+    userSkills:[""]
   })
 
   function toggleState()
