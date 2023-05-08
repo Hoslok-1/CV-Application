@@ -17,34 +17,47 @@ export default function NameLinks(props:any)
 
 
     return(
-        <form id = "name-&-links-form">
-            <input
-                type="text"
-                onChange={handleChange}
-                name="fullName"
-                placeholder="Full Name"
-                value={formData.fullName}
-            />
-            <input
-                type="text"
-                onChange={handleChange}
-                name="githubLink"
-                placeholder="Github Link"
-                value={formData.githubLink}
-            />
-            <input
-                type="text"
-                onChange={handleChange}
-                name="linkdinLink"
-                placeholder="Linkdin Link"
-                value={formData.linkdinLink}
-            />
-            <textarea
-                onChange={handleChange}
-                name="summary"
-                placeholder="Summary of your professional career"
-                value={formData.summary}
-            />
+        <form id = "name-links-form">
+            <div className="form-input">
+                <div>Full Name:</div>
+                
+                <input
+                    type="text"
+                    onChange={handleChange}
+                    name="fullName"
+                    placeholder="Full Name"
+                    value={formData.fullName}
+                    />
+            </div>
+            <div className="form-input">
+                <div>Github Link:</div>
+                <input
+                    type="text"
+                    onChange={handleChange}
+                    name="githubLink"
+                    placeholder="Github Link"
+                    value={formData.githubLink}
+                />
+            </div>
+            <div className="form-input">
+                <div>Linkdin Link:</div>
+                <input
+                    type="text"
+                    onChange={handleChange}
+                    name="linkdinLink"
+                    placeholder="Linkdin Link"
+                    value={formData.linkdinLink}
+                />
+            </div>
+            <div className="form-input">
+                <div>Summary:</div>
+                <textarea
+                    onChange={handleChange}
+                    name="summary"
+                    placeholder="Summary of your professional career"
+                    value={formData.summary}
+                />
+            </div>
         </form>
     )
 }

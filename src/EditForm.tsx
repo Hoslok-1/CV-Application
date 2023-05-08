@@ -37,10 +37,10 @@ export default function EditForm(props:any)
 
         <div>
           <NameLinks formData = {props.formData} setFormData = {props.setFormData}/>
-          {dataShown.WorkExperience && <WorkExp formData = {props.formData} setFormData = {props.setFormData}/>}
-          <button onClick={workExpToggle}>{dataShown.WorkExperience ? "Hide" : "Add work experience"}</button>
+          <div className = "edu-button" id = "button-2"><button onClick ={educationToggle}>{dataShown.showEducation ? "Hide" : "Add Education"}</button></div>
           {dataShown.showEducation && <Education formData = {props.formData} setFormData = {props.setFormData} />}
-          <button onClick={educationToggle}>{dataShown.showEducation ? "Hide" : "Add Education"}</button>
+          <div className="work-exp-button" id = "button-2"><button onClick={workExpToggle}>{dataShown.WorkExperience ? "Hide" : "Add work experience"}</button></div>
+          {dataShown.WorkExperience && <WorkExp formData = {props.formData} setFormData = {props.setFormData}/>}
           <Skills formData = {props.formData} setFormData = {props.setFormData} />
         </div>
     )

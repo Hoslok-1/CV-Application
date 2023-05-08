@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import EditForm from './EditForm';
 import SavedForm from './SavedForm';
+import Header from './components/Header';
 
 export let workExpArr:any = [];
 
@@ -26,14 +27,11 @@ function App()
     userSkills:[""]
   })
 
-  function toggleState()
-  {
-    setShowEditOrSave(prevState => !prevState)
-  }
+
 
   return(
     <div>
-      <button onClick={toggleState}>Save</button>
+      <Header setShowEditOrSave = {setShowEditOrSave} />
       {showEditOrSave ? <EditForm formData = {formData} setFormData = {setFormData} /> : <SavedForm formData = {formData} setFormData = {setFormData} />}
     </div>
   )

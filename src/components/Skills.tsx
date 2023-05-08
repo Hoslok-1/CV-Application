@@ -14,13 +14,16 @@ export default function Skills(props:any){
     }
 
     return(
-        <form>
-            <textarea 
-                name="userSkills"
-                placeholder="Enter technologies you're familiar with. (Maximum 5)"
-                value={props.formData.userSkills}
-                onChange={handleChange}
-            />
+        <form id = "skills-form">
+            <div className="form-input">
+                <div>Skills/Technologies:</div>
+                <textarea 
+                    name="userSkills"
+                    placeholder="Enter technologies you're familiar with.Seperate the words by white space (Maximum 5)"
+                    value={props.formData.userSkills}
+                    onChange={handleChange}
+                />
+                </div>
         </form>
     )
 }

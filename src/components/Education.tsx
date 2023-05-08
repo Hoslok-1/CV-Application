@@ -48,42 +48,57 @@ export default function Education(props:any){
 
     return(
         <form id="education-form" onSubmit={handleSubmit} >
-            <input
-                type="text"
-                name="universityName"
-                value={items.universityName}
-                onChange={handleChange}
-                placeholder="University Name"
-            />
-            <input
-                type="text"
-                name="uniCity"
-                value={items.uniCity}
-                onChange={handleChange}
-                placeholder="City"
-            />
-            <input
-                type="text"
-                name="uniDegree"
-                value={items.uniDegree}
-                onChange={handleChange}
-                placeholder="University Degree"
-            />
-            <input
-                type="text"
-                name="uniFrom"
-                value={items.uniFrom}
-                onChange={handleChange}
-                placeholder="Beginning Of Course"
-            />
-            <input
-                type="text"
-                name="uniTo"
-                value={items.uniTo}
-                onChange={handleChange}
-                placeholder="End Of Course"
-            />
-            <button>Submit</button>
+            <div className="form-input">
+                <div>Name:</div>
+                <input
+                    type="text"
+                    name="universityName"
+                    value={items.universityName}
+                    onChange={handleChange}
+                    placeholder="University Name"
+                />
+            </div>
+            <div className="form-input">
+                <div>City:</div>
+                <input
+                    type="text"
+                    name="uniCity"
+                    value={items.uniCity}
+                    onChange={handleChange}
+                    placeholder="City"
+                />
+            </div>
+            <div className="form-input">
+                <div>Degree:</div>
+                <input
+                    type="text"
+                    name="uniDegree"
+                    value={items.uniDegree}
+                    onChange={handleChange}
+                    placeholder="University Degree"
+                />
+            </div>
+            <div className="form-input">
+                <div>From:</div>
+                <input
+                    type="text"
+                    name="uniFrom"
+                    value={items.uniFrom}
+                    onChange={handleChange}
+                    placeholder="Beginning Of Course"
+                />
+            </div>
+            <div className="form-input">
+                <div>To:</div>
+                <input
+                    type="text"
+                    name="uniTo"
+                    value={items.uniTo}
+                    onChange={handleChange}
+                    placeholder="End Of Course"
+                />
+            </div>
+            <button className="edu-submit">Submit</button>
         </form>
     )
 }

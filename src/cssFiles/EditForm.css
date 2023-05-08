@@ -1,3 +1,4 @@
+
 #work-exp-form{
     display: flex;
     flex-direction: column;
@@ -14,6 +15,48 @@ input {
     display: block;
 }
 
+
+#name-links-form input,#education-form input,#work-exp-form input,#skills-form input, #summary-textarea-form{
+    margin-bottom: 15px;
+    height: 30px;
+    text-indent: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    min-width: 40%;
+    display: block;
+}
+
 textarea{
     margin-bottom: 10px;
+}
+
+
+body{
+    background-color: #FFC0CB;
+}
+
+.form-input{
+    display: flex;
+    gap: 10px;
+    
+}
+
+.form-input > div{
+    margin-top: 7px;
+    margin-left: 20px;
+}
+
+.edu-button,.work-exp-button,.work-exp-submit
+{
+    text-align: center;
+}
+
+.work-exp-submit,.edu-submit{
+    width: fit-content;
+    text-align: center;
+    margin-left: 48%;
+}
+
+#button-2{
+    margin-top: 10px;
 }

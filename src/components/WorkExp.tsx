@@ -46,34 +46,47 @@ export default function WorkExp(props:any)
     console.log(workItems)
     return (
         <form id="work-exp-form" onSubmit={handleSubmit}>
-            <input
-                type = "text"
-                placeholder="Job Title"
-                onChange = {handleChange}
-                name = "jobTitle"
-                value = {workItems.jobTitle}
-            />
-            <input
-                type = "text"
-                placeholder="Company Name"
-                onChange = {handleChange}
-                name = "companyName"
-                value = {workItems.companyName}
-            />
-            <input
-                type = "text"
-                placeholder="Joining Date"
-                onChange = {handleChange}
-                name = "joiningDate"
-                value = {workItems.joiningDate}
-            />
-            <textarea
-                onChange={handleChange}
-                name="jobDesc"
-                value={workItems.jobDesc}
-                placeholder="Summary of the work done in this company"
-            />
-            <button>Submit</button>
+            <div className="form-input">
+                <div>Job Title:</div>
+                <input
+                    type = "text"
+                    placeholder="Job Title"
+                    onChange = {handleChange}
+                    name = "jobTitle"
+                    value = {workItems.jobTitle}
+                />
+            </div>
+            <div className="form-input">
+                <div>Company Name:</div>
+                <input
+                    type = "text"
+                    placeholder="Company Name"
+                    onChange = {handleChange}
+                    name = "companyName"
+                    value = {workItems.companyName}
+                />
+            </div>
+            <div className="form-input">
+                <div>Joining Date:</div>
+                <input
+                    type = "text"
+                    placeholder="Joining Date"
+                    onChange = {handleChange}
+                    name = "joiningDate"
+                    value = {workItems.joiningDate}
+                    />
+            </div>
+            <div className="form-input">
+                <div>Summary:</div>
+                <textarea
+                    onChange={handleChange}
+                    name="jobDesc"
+                    id="summary-textarea-form"
+                    value={workItems.jobDesc}
+                    placeholder="Summary of the work done in this company"
+                />
+            </div>
+            <button className="work-exp-submit">Submit</button>
         </form>
     )
 }
