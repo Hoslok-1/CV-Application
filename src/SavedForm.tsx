@@ -77,7 +77,66 @@ export default function SavedForm(props:any)
             </div>
         )
     }
+    return (
+        <div className="saved-page">
+            <div className="container">
+                <div className="saved-fullname">
+                    <h1>{formData.fullName}</h1>
+                </div>
+                <div className="saved-socials">
+                    <div className="saved-github">{formData.githubLink}</div>
+                    <div className="saved-linkdin">{formData.linkdinLink}</div>
+                </div>
+                <div className="saved-summary-heading"><h2>Summary</h2></div>
+                <div className="saved-hline"/>
+                <div className="saved-summary">
+                    <p>{formData.summary}</p>
+                </div>
+                <div className="saved-hline"/>
+                <div className="saved-eduation-heading"><h2>Education</h2></div>
+                <div className="saved-education">
+                    {Object.keys(formData.universityName).map((key: string,index: React.Key | null | undefined) => (
+                        <div key = {index}>
+                            <div className="saved-university-one">
+                                <div className="saved-university-one-inner">
+                                    <h3>{formData.universityName[key]}</h3>
+                                    <i className="saved-university-one-degree">,{formData.uniDegree[key]}</i>
+                                    <button className="delete-education-btn" onClick={() => deleteEducation(parseInt(key))} >X</button>
+                                </div> 
+                                <p> {formData.uniFrom[key]} - {formData.uniTo[key]}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <div className="saved-hline"/>                
+                <div className="saved-workexp-heading"><h2>Work Experience</h2></div>
+                <div className="saved-workexp">
+                    {Object.keys(formData.jobTitle).map((key,index) =>(
+                        <div key = {index}>
+                            <div className="saved-workexp-one">
+                                <div className="saved-workexp-one-outer">
+                                    <h3 className="saved-workexp-one-compname" >&emsp;{formData.companyName[key]}</h3>
+                                    <button className="delete-work-btn" onClick={() => deleteWork(index)} >X</button>
+                                </div>
+                                <p className="saved-workexp-one-joindate">&emsp; Joining Date: {formData.joiningDate[key]}</p>
+                            </div>
+                            <div>&emsp; <u>{formData.jobTitle[key]}</u></div> 
+                            <p>&emsp; &emsp;&emsp;{formData.jobDesc[key]}</p>
+                        </div>
+                    ))}
+                </div>
+                <div className="user-skills-form">
+                    {displayUserSkills()}
+                </div> 
+            </div>
+        </div>
+    )
+}
 
+
+
+
+/* 
     return(
         <div>
             <div className="name-links">
@@ -119,5 +178,4 @@ export default function SavedForm(props:any)
                     {displayUserSkills()}
             </div> 
         </div>
-    )
-}
+    ) */

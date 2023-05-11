@@ -1,3 +1,69 @@
+.saved-page{
+    height:1000px;
+    width:100%
+}
+
+.container{
+    margin-top: 20px;
+    width:50%;
+    min-height:80%;
+    max-height: fit-content;
+    margin-left: 25%;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #888888;
+}
+
+.saved-fullname{
+    text-align: center;
+}
+
+.saved-socials{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.saved-hline{
+    border-bottom: 4px solid black;
+    width: 101%;
+}
+
+.saved-workexp-one{
+    display: flex;
+    justify-content: space-between;
+}
+
+.saved-workexp-one-outer{
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 10px;
+}
+
+.delete-work-btn,.delete-education-btn{
+    height:fit-content;
+    width: fit-content;
+    margin-top: 17px;
+}
+
+.delete-education-btn{
+    margin-left: 10px;
+}
+
+.saved-university-one{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.saved-university-one-degree{
+    margin-top: 21px;
+}
+
+
+.saved-university-one-inner{
+    display: flex;
+}
+
 .user-skills{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
